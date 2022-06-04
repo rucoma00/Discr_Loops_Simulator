@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "variablescompartidas.h"
+#include "regulador.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -12,10 +14,17 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr, Regulador *regM = nullptr, Regulador *regC = nullptr,
+               VariablesCompartidas *varM = nullptr, VariablesCompartidas *varC = nullptr);
     ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
+
+    Regulador *regMot;
+    Regulador *regCru;
+    VariablesCompartidas *varMot;
+    VariablesCompartidas *varCru;
+
 };
 #endif // MAINWINDOW_H
