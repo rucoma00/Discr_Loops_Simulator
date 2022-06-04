@@ -18,6 +18,11 @@ public:
                VariablesCompartidas *varM = nullptr, VariablesCompartidas *varC = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_PB_ykm_clicked();
+
+    void on_PB_ykc_clicked();
+
 private:
     Ui::MainWindow *ui;
 

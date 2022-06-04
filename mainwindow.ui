@@ -20,6 +20,116 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>20</y>
+      <width>189</width>
+      <height>217</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="G_c">
+     <item row="2" column="0">
+      <widget class="QLabel" name="L_yk1c">
+       <property name="text">
+        <string>Yk[-1]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="L_yk3c">
+       <property name="text">
+        <string>Yk[-3]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="L_yk0c">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Yk[0]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="LE_yk3c">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="L_ykc">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+         <stylestrategy>PreferDefault</stylestrategy>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="text">
+        <string>Salida Crucero</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="LE_yk1c">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="LE_yk0c">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="LE_yk2c">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="L_yk2c">
+       <property name="text">
+        <string>Yk[-2]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="LE_yk4c">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="L_yk4c">
+       <property name="text">
+        <string>Yk[-4]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="PB_ykc">
+       <property name="text">
+        <string>Mostrar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
@@ -29,7 +139,7 @@
       <height>217</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
+    <layout class="QGridLayout" name="G_m">
      <item row="2" column="0">
       <widget class="QLabel" name="L_yk1m">
        <property name="text">
@@ -46,13 +156,20 @@
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="L_yk0m">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
        <property name="text">
         <string>Yk[0]</string>
        </property>
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QLineEdit" name="LE_yk3m"/>
+      <widget class="QLineEdit" name="LE_yk3m">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="0" column="1">
       <widget class="QLabel" name="L_ykm">
@@ -73,13 +190,25 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="LE_yk1m"/>
+      <widget class="QLineEdit" name="LE_yk1m">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="LE_yk0m"/>
+      <widget class="QLineEdit" name="LE_yk0m">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="LE_yk2m"/>
+      <widget class="QLineEdit" name="LE_yk2m">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="L_yk2m">
@@ -89,7 +218,11 @@
       </widget>
      </item>
      <item row="5" column="1">
-      <widget class="QLineEdit" name="LE_yk4m"/>
+      <widget class="QLineEdit" name="LE_yk4m">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="5" column="0">
       <widget class="QLabel" name="L_yk4m">
