@@ -6,15 +6,118 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>993</width>
+    <height>614</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>20</y>
+      <width>182</width>
+      <height>217</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <widget class="QLabel" name="L_yk1m">
+       <property name="text">
+        <string>Yk[-1]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="L_yk3m">
+       <property name="text">
+        <string>Yk[-3]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="L_yk0m">
+       <property name="text">
+        <string>Yk[0]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="LE_yk3m"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="L_ykm">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+         <stylestrategy>PreferDefault</stylestrategy>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="text">
+        <string>Salida Motor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="LE_yk1m"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="LE_yk0m"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="LE_yk2m"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="L_yk2m">
+       <property name="text">
+        <string>Yk[-2]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="LE_yk4m"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="L_yk4m">
+       <property name="text">
+        <string>Yk[-4]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="PB_ykm">
+       <property name="text">
+        <string>Mostrar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>993</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
