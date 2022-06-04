@@ -31,4 +31,7 @@
 //#define LAZO_MOTOR
 //#define LAZO_CRUCERO
 
+// Para ver la salidas en el terminal
+//#define COUT_TERMINAL
+
 #endif // CONFIG_H

@@ -47,10 +47,12 @@ void Planta::HiloPlanta()
         clock_gettime(CLOCK_REALTIME,&t);               // 1)   Captura de tiempo actual
         Suma_timespec(&t,&tperiodo);                    // 2)   Suma al tiempo actual un periodo fijo
         varcomp->Set_yk(Calc_yk(varcomp->Get_uk()));    // 3)   Hacer cálculos. Calcualar yk a partit de uk y guardarla
+        #ifdef COUT_TERMINAL
         if(T == PERIODO_PLANTA_MOTOR)                   //      Comprobación de en que sistema está
             cout<<varcomp->Get_yk(0)<<endl;             //      Salida por pantalla a la izquierda si es el motor
         else
             cout<<"\t\t"<<varcomp->Get_yk(0)<<endl;     //      Salida por pantalla a la derecha si es el crucero
+        #endif
         clock_nanosleep(CLOCK_REALTIME, TIMER_ABSTIME,&t,NULL); // 4)   Hacer retardo. De esta forma queda retardo absoluto
     }
 }
