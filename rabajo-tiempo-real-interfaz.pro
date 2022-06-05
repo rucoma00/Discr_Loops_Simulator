@@ -1,6 +1,6 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 CONFIG += c++11
 
@@ -15,6 +15,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     planta.cpp \
+    qcustomplot.cpp \
     regulador.cpp \
     sensor.cpp \
     variablescompartidas.cpp
@@ -26,6 +27,7 @@ HEADERS += \
     funciones_hilos.h \
     mainwindow.h \
     planta.h \
+    qcustomplot.h \
     regulador.h \
     sensor.h \
     variablescompartidas.h
