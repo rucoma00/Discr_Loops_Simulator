@@ -15,6 +15,10 @@
 #define CH_CRUCERO 1
 
 #define REFERENCIA_INIT 1
+#define REFERENCIA_MAX 10
+#define REFERENCIA_MIN 0
+#define KP_MAX 10
+#define KP_MIN 0
 
 // Sensores
 #define GANANCIA_SENSOR 500
