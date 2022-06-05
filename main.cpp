@@ -75,13 +75,6 @@ int main(int argc, char *argv[])
     pthread_create(&h_regCru, NULL, fn_Regulador, static_cast<void*>(&regCru)); // Hilo regulador crucero
     pthread_create(&h_plaCru, NULL, fn_Planta, static_cast<void*>(&plaCru));    // Hilo planta crucero
     pthread_create(&h_conver, NULL, fn_Conversor, static_cast<void*>(&conv));   // Hilo conversor
-
-    // Finalización
-//    pthread_join(h_regMot,NULL);
-//    pthread_join(h_plaMot,NULL);
-//    pthread_join(h_regCru,NULL);
-//    pthread_join(h_plaCru,NULL);
-//    pthread_join(h_conver,NULL);
     #endif
 
     #ifdef LAZO_MOTOR   // Solo se ejecuta el lazo motor
