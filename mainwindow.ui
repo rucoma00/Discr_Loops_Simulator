@@ -166,8 +166,14 @@
     <property name="buttonSymbols">
      <enum>QAbstractSpinBox::PlusMinus</enum>
     </property>
+    <property name="decimals">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <double>10.000000000000000</double>
+    </property>
     <property name="singleStep">
-     <double>0.010000000000000</double>
+     <double>0.100000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="L_Kpc">
@@ -201,11 +207,14 @@
     <property name="buttonSymbols">
      <enum>QAbstractSpinBox::PlusMinus</enum>
     </property>
+    <property name="decimals">
+     <number>1</number>
+    </property>
     <property name="maximum">
      <double>10.000000000000000</double>
     </property>
     <property name="singleStep">
-     <double>0.010000000000000</double>
+     <double>0.100000000000000</double>
     </property>
    </widget>
    <widget class="QWidget" name="">
