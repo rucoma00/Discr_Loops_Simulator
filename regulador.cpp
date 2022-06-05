@@ -8,21 +8,33 @@ Regulador::Regulador(double periodo, double ganancia, FDT *funcion, Conversor *c
     fdt=funcion;
     conversor=conv;
     varcomp=var;
+
+    pthread_mutex_init(&mutKp, NULL);
 }
 
 double Regulador::Calc_uk(double ek)
 {
-    return Kp*fdt->Calc(ek);   // Kp se modifica por pantalla, proteger
+    double salida_fdt = fdt->Calc(ek);
+    pthread_mutex_lock(&mutKp);
+    double uk = salida_fdt * Kp;        // Kp se modifica por pantalla, proteger
+    pthread_mutex_unlock(&mutKp);
+    return uk;
 }
 
 double Regulador::Get_Kp()
 {
-    return Kp;
+    double ganancia;
+    pthread_mutex_lock(&mutKp);
+    ganancia=Kp;
+    pthread_mutex_unlock(&mutKp);
+    return ganancia;
 }
 
 void Regulador::Set_Kp(double ganancia)
 {
+    pthread_mutex_lock(&mutKp);
     Kp=ganancia;
+    pthread_mutex_unlock(&mutKp);
 }
 
 double Regulador::Get_T()

@@ -14,6 +14,8 @@ class Regulador
     Conversor *conversor;
     VariablesCompartidas *varcomp;
 
+    pthread_mutex_t mutKp;
+
     // Función para sumar estructuras de tiempo. Devuelve el resultado en t1
     void Suma_timespec(struct timespec *t1, struct timespec *t2);
 
