@@ -23,9 +23,13 @@ private slots:
 
     void on_PB_ykc_clicked();
 
-    void on_DSB_refm_valueChanged(double arg1);
+    void on_VS_refm_sliderMoved(int position);
 
-    void on_DSB_refc_valueChanged(double arg1);
+    void on_VS_refc_sliderMoved(int position);
+
+    void on_DSP_Kpm_valueChanged(double Kp);
+
+    void on_DSP_Kpc_valueChanged(double Kp);
 
 private:
     Ui::MainWindow *ui;

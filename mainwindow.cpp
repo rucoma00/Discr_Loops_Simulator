@@ -28,8 +28,14 @@ MainWindow::MainWindow(QWidget *parent, Regulador *regM, Regulador *regC,
     ui->LE_yk4c->setText("0");
 
     // Iniciaizar entradas de referencia a 1
-    ui->DSB_refm->setValue(REFERENCIA_INIT);
-    ui->DSB_refc->setValue(REFERENCIA_INIT);
+    ui->LCDN_refm->display(REFERENCIA_INIT);
+    ui->VS_refm->setValue(REFERENCIA_INIT*100);
+    ui->LCDN_refc->display(REFERENCIA_INIT);
+    ui->VS_refc->setValue(REFERENCIA_INIT*100);
+
+    // Inicilaizar entradas de Kp
+    ui->DSP_Kpm->setValue(KP_INIT_REGULADOR_MOTOR);
+    ui->DSP_Kpc->setValue(KP_INIT_REGULADOR_CRUCERO);
 }
 
 MainWindow::~MainWindow()
@@ -58,32 +64,26 @@ void MainWindow::on_PB_ykc_clicked()
     ui->LE_yk4c->setText(text.setNum(varCru->Get_yk(4)));
 }
 
-void MainWindow::on_DSB_refm_valueChanged(double refm)
+void MainWindow::on_VS_refm_sliderMoved(int position)
 {
-    if(refm>10)
-    {
-        refm=10;
-        ui->DSB_refm->setValue(refm);
-    }
-    else if(refm<0)
-    {
-        refm=0;
-        ui->DSB_refm->setValue(refm);
-    }
-    varMot->Set_r(refm);
+    double ref=position/100.0;
+    varMot->Set_r(ref);
+    ui->LCDN_refm->display(ref);
 }
 
-void MainWindow::on_DSB_refc_valueChanged(double refc)
+void MainWindow::on_VS_refc_sliderMoved(int position)
 {
-    if(refc>10)
-    {
-        refc=10;
-        ui->DSB_refm->setValue(refc);
-    }
-    else if(refc<0)
-    {
-        refc=0;
-        ui->DSB_refm->setValue(refc);
-    }
-    varCru->Set_r(refc);
+    double ref=position/100.0;
+    varCru->Set_r(ref);
+    ui->LCDN_refc->display(ref);
+}
+
+void MainWindow::on_DSP_Kpm_valueChanged(double Kp)
+{
+    regMot->Set_Kp(Kp);
+}
+
+void MainWindow::on_DSP_Kpc_valueChanged(double Kp)
+{
+    regCru->Set_Kp(Kp);
 }
