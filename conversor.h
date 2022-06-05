@@ -21,13 +21,6 @@ typedef struct
             START:  1;
 }CSR;
 
-typedef struct
-{
-   uint16_t :       4,  // Sin usar
-            S:      1,  // Signo
-            NUM:    11; // Número
-}DR;
-
 class Conversor
 {
     double Vmax, Vmin;  // Rango de tensiones de entrada
