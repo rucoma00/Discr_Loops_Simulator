@@ -23,6 +23,10 @@ private slots:
 
     void on_PB_ykc_clicked();
 
+    void on_DSB_refm_valueChanged(double arg1);
+
+    void on_DSB_refc_valueChanged(double arg1);
+
 private:
     Ui::MainWindow *ui;
 

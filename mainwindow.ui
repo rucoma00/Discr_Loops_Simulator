@@ -42,6 +42,64 @@
      <string>Salir</string>
     </property>
    </widget>
+   <widget class="QDoubleSpinBox" name="DSB_refm">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>290</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="wrapping">
+     <bool>false</bool>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_refm">
+    <property name="geometry">
+     <rect>
+      <x>44</x>
+      <y>260</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Referencia Motor</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_refc">
+    <property name="geometry">
+     <rect>
+      <x>284</x>
+      <y>260</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Referencia Crucero</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="DSB_refc">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>290</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="wrapping">
+     <bool>false</bool>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>

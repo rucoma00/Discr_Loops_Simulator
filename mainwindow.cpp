@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "config.h"
 
 MainWindow::MainWindow(QWidget *parent, Regulador *regM, Regulador *regC,
                        VariablesCompartidas *varM, VariablesCompartidas *varC)
@@ -25,6 +26,10 @@ MainWindow::MainWindow(QWidget *parent, Regulador *regM, Regulador *regC,
     ui->LE_yk2c->setText("0");
     ui->LE_yk3c->setText("0");
     ui->LE_yk4c->setText("0");
+
+    // Iniciaizar entradas de referencia a 1
+    ui->DSB_refm->setValue(REFERENCIA_INIT);
+    ui->DSB_refc->setValue(REFERENCIA_INIT);
 }
 
 MainWindow::~MainWindow()
@@ -51,4 +56,34 @@ void MainWindow::on_PB_ykc_clicked()
     ui->LE_yk2c->setText(text.setNum(varCru->Get_yk(2)));
     ui->LE_yk3c->setText(text.setNum(varCru->Get_yk(3)));
     ui->LE_yk4c->setText(text.setNum(varCru->Get_yk(4)));
+}
+
+void MainWindow::on_DSB_refm_valueChanged(double refm)
+{
+    if(refm>10)
+    {
+        refm=10;
+        ui->DSB_refm->setValue(refm);
+    }
+    else if(refm<0)
+    {
+        refm=0;
+        ui->DSB_refm->setValue(refm);
+    }
+    varMot->Set_r(refm);
+}
+
+void MainWindow::on_DSB_refc_valueChanged(double refc)
+{
+    if(refc>10)
+    {
+        refc=10;
+        ui->DSB_refm->setValue(refc);
+    }
+    else if(refc<0)
+    {
+        refc=0;
+        ui->DSB_refm->setValue(refc);
+    }
+    varCru->Set_r(refc);
 }
