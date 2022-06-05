@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "variablescompartidas.h"
 #include "regulador.h"
+#include "qcustomplot.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -31,6 +32,8 @@ private slots:
 
     void on_DSP_Kpc_valueChanged(double Kp);
 
+    void ActualizarGraficas();
+
 private:
     Ui::MainWindow *ui;
 
@@ -39,5 +42,6 @@ private:
     VariablesCompartidas *varMot;
     VariablesCompartidas *varCru;
 
+    QTimer dataTimer;
 };
 #endif // MAINWINDOW_H
