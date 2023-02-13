@@ -1,6 +1,11 @@
 # Discrete Control Loops Simulator
-This project implements the control of two systems: ***Motor Speed Control*** and ***Cruise Control***, and allows the user to tune some parameters and visualize different outputs thanks to a custom GUI. It is archieved thanks to three concurrent actions, two discrete control loops and a supervision task.
+This project implements the control of two systems: ***Motor Speed Control*** and ***Cruise Control***, and allows the user to tune some parameters and visualize different outputs thanks to a custom [**GUI**](#gui). It is archieved thanks to three concurrent actions, two discrete control loops and a supervision task.
 
+The software uses many classes to make the code easier to process. The following class diagram describes them and how they interact with each other:
+
+![General shematic](Media/clases_v2.PNG)
+
+Follow this [link (Spanish)](https://drive.google.com/file/d/1WyH8rKnFjdqK5qNGWbde-ZIhorKOqN4e/view?usp=sharing) to a document with extra diagrams and explanations.
 ## Control loops general description.
 Two discrete control loops are implemented. In each of them, two threads corresponding to the ***Regulator (R)*** and ***Plant (G)*** are executed in a cyclic manner. Each control loop has a different period: 50 ms for the ***Motor Speed Control*** and 20 ms for the ***Cruise Control***. 
 
@@ -12,6 +17,9 @@ R_{Motor}=Kp\times \frac{414.1z^2-647.8z+250.1}{z^3+0.82z^2-z-0.82}
 ```math
 G_{Motor}=\frac{0.0005663z+0.0005125}{z^2-1.73z+0.7408}
 ```
+The following sequence diagram describes how the loop works:
+
+![General shematic](Media/lazomotor.PNG)
 
 The ***Cruise Control (T = 20 ms)*** is implemented by the following equations:
 
@@ -21,6 +29,9 @@ R_{Cruise}=Kp\times \frac{414.1z^2-647.8z+250.1}{z^3+0.82z^2-z-0.82}
 ```math
 G_{Cruise}=\frac{0.0005663z+0.0005125}{z^2-1.73z+0.7408}
 ```
+The following sequence diagram describes how the loop works:
+
+![General shematic](Media/lazocrucero.PNG)
 
 The inputs to this systems are always considered to be *steps*. Their amplitude can be modifyed in the GUI. 
 
@@ -68,9 +79,14 @@ csr.CANAL=Ncanal;               // Seleccion de canal
 csr.START=1;                    // Inicio de conversión
 ```
 ## GUI
+User-case diagram:
+![General shematic](Media/casosdeuso.PNG)
+
 The graphic interface shows for each control loop:
 - Last 5 output values (***Yk***) with a button to refresh them.
 - Reference adjustemnt slider.
 - Box to modify regulator's gain (***Kp***) value.
 - Exit button.
 - A graph showing the system's output against the reference.
+
+![General shematic](Media/gui.PNG)
