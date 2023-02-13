@@ -1,4 +1,4 @@
-# trabajo-tiempo-real-interfaz
+# Discreete Control Loops Simulator
 This project implements the control of two systems: ***Motor Speed Control*** and ***Cruise Control***, and allows the user to tune some parameters and visualize different outputs thanks to a custom GUI. It is archieved thanks to three concurrent actions, two discrete control loops and a supervision task.
 
 ## Control loops general description.
