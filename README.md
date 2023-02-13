@@ -68,3 +68,9 @@ csr.CANAL=Ncanal;               // Seleccion de canal
 csr.START=1;                    // Inicio de conversión
 ```
 ## GUI
+The graphic interface shows for each control loop:
+- Last 5 output values (***Yk***) with a button to refresh them.
+- Reference adjustemnt slider.
+- Box to modify regulator's gain (***Kp***) value.
+- Exit button.
+- A graph showing the system's output against the reference.
